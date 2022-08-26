@@ -1,27 +1,27 @@
-package models;
+package models.dtos;
 
 
-public class User {
+public class UserDto {
 
     private int id;
     private String fullName;
     private String email;
     private String password;
 
-    public User(int id, String fullName, String email, String password) {
+    public UserDto(int id, String fullName, String email, String password) {
         this.id = id;
         this.fullName = fullName;
         this.email = email;
         this.password = password;
     }
 
-    public User(String fullName, String email, String password) {
+    public UserDto(String fullName, String email, String password) {
         this.fullName = fullName;
         this.email = email;
         this.password = password;
     }
 
-    public User() {
+    public UserDto() {
     }
 
     public int getId() {

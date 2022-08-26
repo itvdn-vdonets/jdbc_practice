@@ -1,5 +1,6 @@
 import db.DBConnect;
 import models.User;
+import models.dtos.UserDto;
 import repos.UserRepo;
 import services.UserService;
 
@@ -17,6 +18,11 @@ public class Main {
             userRepo.addUser(new User("gasfh", "ahjgj@email.com", "westrongpass"));
             List<User> allUsersWithWeakPassword = userService.findAllUsersWithWeakPassword();
             System.out.println(allUsersWithWeakPassword);
+
+            userRepo.changePassword(1,"newPassword");
+            //fullname -> Ivan
+            userRepo.updateUser(new UserDto(1, null, null, "new passs!!!!"));
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
